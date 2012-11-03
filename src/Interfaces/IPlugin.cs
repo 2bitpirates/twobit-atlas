@@ -19,8 +19,15 @@ using System.Collections.Generic;
 
 namespace TwoBit
 {
+	/// <summary>
+	/// Interface to support external processing
+	/// </summary>
 	public interface IPlugin
 	{
+		/// <summary>
+		/// Execute the plugin's actions
+		/// </summary>
+		/// <param name="args">List of arguments passed to the pluing</param>
 		void Execute(IEnumerable<string> args);
 	}
 }

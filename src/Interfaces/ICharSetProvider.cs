@@ -21,6 +21,9 @@ using TwoBit.Utilities;
 
 namespace TwoBit.Atlas
 {
+	/// <summary>
+	/// Factory that provides a collection of possible character sets to use
+	/// </summary>
 	public interface ICharSetProvider
 	{
 		Factory<ICharSet> Factory { get; }

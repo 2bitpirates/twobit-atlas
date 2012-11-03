@@ -171,7 +171,7 @@ namespace TwoBit.Atlas
 
 		[Category("Fonts")]
 		[DefaultValue(true)]
-		[Description("When using fonts, set to True to force adding a Space glpyh")]
+		[Description("When using fonts, set to True to force adding a Space glyph")]
 		public bool ForceSpace { get; set; }
 
 		[DisplayName("Font")]
@@ -179,6 +179,7 @@ namespace TwoBit.Atlas
 		[TypeConverter(typeof(FontConverter.FontNameConverter))]
 		[Editor("System.Drawing.Design.FontNameEditor, System.Drawing.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
 		[DefaultValue("Arial")]
+		[Description("Name of the system font")]
 		[AtlasMutable(AtlasMutable.Font)]
 		public string FontName
 		{
@@ -252,7 +253,7 @@ namespace TwoBit.Atlas
 		}
 
 		[Category("Images")]
-		[Description("Default inital character code for images")]
+		[Description("Inital glyph code for images")]
 		[DefaultValue(0)]
 		public int StartCode { get { return startCode; } set { startCode = Math.Max(0, value); } }
 		#endregion

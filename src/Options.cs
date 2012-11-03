@@ -894,7 +894,7 @@ namespace NDesk.Options {
 			option.Invoke (c);
 		}
 
-		private const int OptionWidth = 39;
+		private const int OptionWidth = 29;
 
 		public void WriteOptionDescriptions (TextWriter o)
 		{

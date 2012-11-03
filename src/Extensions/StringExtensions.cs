@@ -16,6 +16,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace TwoBit.Extensions
 {
@@ -31,9 +32,19 @@ namespace TwoBit.Extensions
 			return char.MinValue;
 		}
 
+		public static IEnumerable<string> SplitQuotes(this string value)
+		{
+			var exp = @"(?<=^(?:[^""]*""[^""]*"")*[^""]*) ";
+			var strings = Regex.Split(value, exp);
+			foreach (string s in strings)
+			{
+				yield return s;
+			}
+		}
+
 		public static string Repeat(this string value, int count)
 		{
-			string result = string.Empty;
+			var result = string.Empty;
 
 			for (int i = 0; i < count; i++)
 			{

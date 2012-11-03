@@ -177,11 +177,6 @@ namespace TwoBit.Atlas
 			return glyphs;
 		}
 
-		public IEnumerable<Vec2i> PlaceGlyphs(GlyphDescriptorCollection glyphs, IAtlasDescriptor descriptor, Action<float> progress)
-		{
-			return PlaceGlyphs(glyphs, descriptor, progress, null);
-		}
-
 		public IEnumerable<Vec2i> PlaceGlyphs(GlyphDescriptorCollection glyphs, IAtlasDescriptor descriptor, Action<float> progress, CancellationTokenSource cts)
 		{
 			List<Vec2i> sizes = new List<Vec2i>();

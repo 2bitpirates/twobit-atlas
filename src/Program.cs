@@ -36,7 +36,8 @@ namespace TwoBit.Atlas
 			Help,
 			List,
 			Build,
-			Plugin
+			Plugin,
+			Console
 		}
 
 		private OptionSet opt;
@@ -65,6 +66,7 @@ namespace TwoBit.Atlas
 		private int spacing;
 		private int maxSize;
 		private object[] services;
+		private Command cmd;
 
 		private Program()
 		{
@@ -112,7 +114,7 @@ namespace TwoBit.Atlas
 
 		private int Run(string[] args)
 		{
-			Command cmd = Command.None;
+			cmd = Command.None;
 
 			opt = new OptionSet()
 			{
@@ -125,6 +127,7 @@ namespace TwoBit.Atlas
 				{"v|verbose", "enable maximum verbosity", v => verbose = v != null },
 				{"m|make-sprite", "make an associated sprite", v => makeSprite = v != null },
 				{"p=|plugin", "execute module plugin in {assembly}", v => { pluginPath = v; cmd = Command.Plugin; } },
+				{"C|console-mode", "run in interactive console mode", v => cmd = Command.Console },
 				{"plugin-module=", "optional plugin module {name}", v => pluginName = v },
 				{"power-two", "force atlas dimensions to be a power of 2", v => powTwo = v != null},
 				{"max-size=", "maximum texture {size} in pixels [2048]", v => int.TryParse(v, out maxSize) },
@@ -165,6 +168,10 @@ namespace TwoBit.Atlas
 					case Command.Build:
 						Validate();
 						Process();
+						break;
+
+					case Command.Console:
+						new Interactive(this).Run();
 						break;
 				}
 			}
@@ -434,10 +441,15 @@ namespace TwoBit.Atlas
 			}
 		}
 
-		private void WriteHelp()
+		private void WriteHelpHeader()
 		{
 			Console.WriteLine("{0} v{1}\n", fvi.ProductName.Trim(), fvi.ProductVersion.Trim());
 			Console.WriteLine(fvi.Comments + "\n");
+		}
+
+		private void WriteHelp()
+		{
+			WriteHelpHeader();
 
 			opt.WriteOptionDescriptions(Console.Out);
 

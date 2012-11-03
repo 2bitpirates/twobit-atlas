@@ -20,15 +20,49 @@ using System.Drawing;
 
 namespace TwoBit.Atlas
 {
+	/// <summary>
+	/// Defines an Image glyph
+	/// </summary>
 	public interface IImageInfo : IDisposable
 	{
+		/// <summary>
+		/// FileInfo for this image
+		/// </summary>
 		FileInfo FileInfo { get; }
+
+		/// <summary>
+		/// Bitmap data of image
+		/// </summary>
 		Image Image { get; }
+
+		/// <summary>
+		/// Image origin location
+		/// </summary>
 		Vec2f Offset { get; set; }
-		int Code { get; set; }
+
+		/// <summary>
+		/// Set to True to use the 
+		/// </summary>
 		bool HasCustomCode { get; set; }
+
+		/// <summary>
+		/// Custom code this Glyph will have on the atlas
+		/// </summary>
+		int Code { get; set; }
+
+		/// <summary>
+		/// Glyph ID value on the atlas
+		/// </summary>
 		int SortCode { get; set; }
+
+		/// <summary>
+		/// GUI Editor workspace locaiton
+		/// </summary>
 		Vec2f Location { get; set; }
+
+		/// <summary>
+		/// GUI Editor image orientation
+		/// </summary>
 		float Angle { get; set; }
 	}
 }

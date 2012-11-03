@@ -19,6 +19,9 @@ using System.Collections.Generic;
 
 namespace TwoBit.Atlas
 {
+	/// <summary>
+	/// Defines a set of characters to add to an atlas
+	/// </summary>
 	public interface ICharSet
 	{
 		IEnumerable<char> Characters { get; }
