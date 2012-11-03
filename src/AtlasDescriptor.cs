@@ -82,10 +82,10 @@ namespace TwoBit.Atlas
 			MaxSize = 4096;
 			ForceSpace = true;
 
-			DisposeImages();
+			ClearImages();
 		}
 
-		private void DisposeImages()
+		public void ClearImages()
 		{
 			foreach (IDisposable image in images)
 			{
@@ -255,6 +255,7 @@ namespace TwoBit.Atlas
 		[Category("Images")]
 		[Description("Inital glyph code for images")]
 		[DefaultValue(0)]
+		[AtlasMutable(AtlasMutable.Image)]
 		public int StartCode { get { return startCode; } set { startCode = Math.Max(0, value); } }
 		#endregion
 
@@ -320,7 +321,7 @@ namespace TwoBit.Atlas
 					font = null;
 				}
 
-				DisposeImages();
+				ClearImages();
 			}
 		}
 

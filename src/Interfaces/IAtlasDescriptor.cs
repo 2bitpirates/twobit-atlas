@@ -136,6 +136,11 @@ namespace TwoBit.Atlas
 		void SortImages();
 
 		/// <summary>
+		/// Removes all IImageInfo images
+		/// </summary>
+		void ClearImages();
+
+		/// <summary>
 		/// Event is triggered when any setting requires the atlas System.Drawing.Font to be regenerated
 		/// </summary>
 		event EventHandler FontChanged;

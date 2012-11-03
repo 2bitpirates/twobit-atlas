@@ -41,9 +41,5 @@ namespace TwoBit.Atlas
 		[Description("Action to perform when the sprite reaches the last frame")]
 		[DefaultValue(OverflowAction.Loop)]
 		public OverflowAction Overflow { get; set; }
-
-		[Category("Attributes")]
-		[Description("Additional offset to set the sprite")]
-		public Vec2f Origin { get; set; }
 	}
 }

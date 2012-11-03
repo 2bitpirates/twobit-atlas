@@ -273,7 +273,8 @@ namespace TwoBit.Atlas
 			object xi = doc.AddNode(root, "images");
 			foreach (var image in images)
 			{
-				var ifile = file + (count++).ToString() + ".png";
+				// don't number image when we have only one image
+				var ifile = images.Count() > 1 ? file + (count++).ToString() + ".png" : file + ".png";
 				object node = doc.AddNode(xi, "image");
 				doc.SetAttrib(node, "src", ifile);
 				doc.SetAttrib(node, "width", image.Width);
@@ -347,7 +348,6 @@ namespace TwoBit.Atlas
 				object spr = doc.AddNode(editor, "sprite");
 				doc.SetAttrib(spr, "rate", sprite.Rate);
 				doc.SetAttrib(spr, "overflow", sprite.Overflow);
-				doc.SetAttrib(spr, "origin", sprite.Origin);
 			}
 
 			// save image info
@@ -378,7 +378,6 @@ namespace TwoBit.Atlas
 				object sr = sdoc.AddRoot("sprite");
 				sdoc.SetAttrib(sr, "rate", sprite.Rate);
 				sdoc.SetAttrib(sr, "overflow", sprite.Overflow);
-				sdoc.SetAttrib(sr, "origin", sprite.Origin);
 
 				// string GetRelativePath
 				object x0 = sdoc.AddNode(sr, "elements");

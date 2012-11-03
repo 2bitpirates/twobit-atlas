@@ -24,6 +24,6 @@ _Interactive Console Mode:_ Generate atlases via a console menu ``twobit-atlas.e
 ![Interactive](https://github.com/foobit/twobit-atlas/raw/master/doc/interactive.png)
 
 ## Plugin Support ##
-The tool can be expanded via C# assembly plugins during runtime.
+The tool can be expanded via C# assembly plugins during startup.
 
 In addition the executable can be used as an assembly in your existing .Net managed projects. Just add a reference to the executable itself.

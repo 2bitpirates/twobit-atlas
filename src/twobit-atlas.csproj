@@ -58,6 +58,7 @@
     <Compile Include="Extensions\IOExtensions.cs" />
     <Compile Include="Extensions\IServiceProviderExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="ImageDescriptor.cs" />
     <Compile Include="ImageInfo.cs" />
     <Compile Include="Interactive.cs" />
     <Compile Include="Interfaces\IIndexValue.cs" />

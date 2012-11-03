@@ -20,6 +20,17 @@ namespace TwoBit.Utilities
 {
 	public static class ConsoleEx
 	{
+		public static void WritePad(int count, int width)
+		{
+			if (count < width)
+				Console.Write(new String(' ', width - count));
+			else
+			{
+				Console.WriteLine();
+				Console.Write(new String(' ', width));
+			}
+		}
+
 		public static void WriteLine(string value)
 		{
 			Write(value);

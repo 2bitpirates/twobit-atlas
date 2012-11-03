@@ -75,6 +75,14 @@ namespace TwoBit
 			return new Vec2i(value1.X + value2.X, value1.Y + value2.Y);
 		}
 
+		public static implicit operator Vec2f(Vec2i value)
+		{
+			Vec2f vec;
+			vec.X = (float)value.X;
+			vec.Y = (float)value.Y;
+			return vec;
+		}
+
 		public static readonly Vec2i Zero = new Vec2i(0, 0);
 
 		public int this[int index]
