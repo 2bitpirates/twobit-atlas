@@ -7,7 +7,6 @@ To get the full list of options type the following at the command prompt:
 >twobit-atlas.exe --help
 
 ## Features ##
-
 _Image Atlas:_ Combine multiple images to a single compact image. Optionally use the ``--make-sprite`` option to create a sprite animation info file assocated with the atlas.
 
 _Glyph Layout:_ layout on the atlas can be placed in a grid or best fit.
@@ -20,6 +19,11 @@ _Glyph Layout:_ layout on the atlas can be placed in a grid or best fit.
 
 ![Tahoma 24pt grid](https://github.com/foobit/twobit-atlas/raw/master/doc/tahoma24-grid.png)
 
-_Plugin Support:_ The tool can be expanded via C# assembly plugins during runtime.
+_Interactive Console Mode:_ Generate atlases via a console menu ``twobit-atlas.exe -C``
+
+![Interactive](https://github.com/foobit/twobit-atlas/raw/master/doc/interactive.png)
+
+## Plugin Support ##
+The tool can be expanded via C# assembly plugins during runtime.
 
 In addition the executable can be used as an assembly in your existing .Net managed projects. Just add a reference to the executable itself.
