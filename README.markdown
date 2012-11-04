@@ -36,12 +36,10 @@ In addition the executable can be used as an assembly in your existing .Net mana
 Rebuilding from source requires Visual Studio 2010 or later (VS Express Editions work too)
 
 ## Acknowledgements ##
-**NDesk Options** [http://www.ndesk.org/Options](http://www.ndesk.org/Options) Excellent C# command line parser with getopt like syntax (support for long and short syntax). _main command line parser for twobit-atlas_
+**NDesk Options:** [http://www.ndesk.org/Options](http://www.ndesk.org/Options)
 
-**OpenTK** [http://www.opentk.com/](http://www.opentk.com/) Excellent C# OpenGL implementation. _used in the ExplodeSpriteAtlas sample_
+Excellent C# command line parser with getopt like syntax (support for long and short syntax). _main command line parser for twobit-atlas_
 
+**OpenTK:** [http://www.opentk.com/](http://www.opentk.com/)
 
-
-
-
-k
+Easy to use C# OpenGL implementation. _used in the ExplodeSpriteAtlas sample_
