@@ -17,6 +17,10 @@ All sample batch files generate the resutls to the ``.\output`` folder.
 
 ![image crop](https://github.com/foobit/twobit-atlas/raw/master/doc/image-crop.png)
 
+**lostgarden.bat** generates two atlas types from [lostgarden.com](http://www.lostgarden.com/). Shows packing of images of various sizes.
+
+![texture pack](https://github.com/foobit/twobit-atlas/raw/master/doc/texturepack.png)
+
 ### Sample Applications ###
 
 **HelloWorldAtlas** C# WinForms app that shows how to load and render from an atlas xml file.  Just drag-n-drop an atlas file to view.  Type in the textbox to change the default text. Clear the textbox to revert to the default display text.

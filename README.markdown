@@ -1,7 +1,7 @@
 # twobit-atlas #
-
 **twobit-atlas** is a Windows command line tool to generate image atlas sheets.  It can generate atlases from a directory of images, specified true type font, or a combination of both.
 
+## Download ##
 _Windows binary installer:_
 [https://github.com/foobit/twobit-atlas/downloads](https://github.com/foobit/twobit-atlas/downloads "Binary GUI installer")
 
@@ -10,7 +10,13 @@ To get the full list of options type the following at the command prompt:
 >twobit-atlas.exe --help
 
 ## Features ##
-_Image Atlas:_ Combine multiple images to a single compact image. Optionally use the ``--make-sprite`` option to create a sprite animation info file assocated with the atlas.
+_Texture Packing:_ Combine multiple images to a single compact image. Optionally use the ``--make-sprite`` option to create a sprite animation info file assocated with the atlas.
+
+![Texture Pack](https://github.com/foobit/twobit-atlas/raw/master/doc/texturepack.png)
+
+_Auto Offset Registration:_ Images offsets can be automatically matched from the source dimensions. The alignment offset is stored with the atlas. Drawing from the atlas information will have glyphs line up correctly.
+
+![Offset Matching](https://github.com/foobit/twobit-atlas/raw/master/doc/texture-offsets.png)
 
 _Glyph Layout:_ layout on the atlas can be placed in a grid or best fit.
 
@@ -43,3 +49,7 @@ Excellent C# command line parser with getopt like syntax (support for long and s
 **OpenTK:** [http://www.opentk.com/](http://www.opentk.com/)
 
 Easy to use C# OpenGL implementation. _used in the ExplodeSpriteAtlas sample_
+
+**Lost Garden:** [http://www.lostgarden.com/](http://www.lostgarden.com/)
+
+Free to use game artwork.
