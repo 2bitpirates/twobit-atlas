@@ -1,0 +1,1 @@
+@..\bin\twobit-atlas -i .\assets\buttons -o .\output\buttons.atlas -v --image-center

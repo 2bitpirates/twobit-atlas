@@ -1,0 +1,1 @@
+@..\bin\twobit-atlas -i .\assets\explode -o .\output\explode.atlas -v -m --sprite-overflow Loop --make-sprite --image-center

@@ -578,9 +578,9 @@ namespace TwoBit.Atlas
 			}
 
 			// try to find an empty space within the current used box
-			for (long y = 0; y < (minsize.Y - reqHeight); y++)
+			for (long y = 0; y <= (minsize.Y - reqHeight); y++)
 			{
-				for (long x = 0; x < (minsize.X - reqWidth); x++)
+				for (long x = 0; x <= (minsize.X - reqWidth); x++)
 				{
 					long cx, cy;
 					long incr = y * big;
