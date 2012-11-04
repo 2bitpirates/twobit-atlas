@@ -1,1 +1,1 @@
-@..\bin\twobit-atlas -f Tahoma --font-size 48 -i .\assets\buttons -o .\output\button-font.atlas --image-start 256 -v --image-origin "16, 30"
+@..\bin\twobit-atlas -f Tahoma --font-size 48 -i .\assets\buttons -o .\output\button-font.atlas --image-start 256 -v --image-origin "-1, 30"

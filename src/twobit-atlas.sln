@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "twobit-atlas", "twobit-atlas.csproj", "{ED62B325-8E16-4A70-8044-4F01B4A78E9F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{E9A6898F-F3CE-44D4-B940-E6CAE5755CE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tool", "tool", "{E487C81C-8EE3-428F-B7F2-EFF52AC204A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldAtlas", "..\samples\HelloWorldAtlas\HelloWorldAtlas.csproj", "{D59D3643-94BF-49FD-882E-AEF1D3C9D63E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +19,16 @@ Global
 		{ED62B325-8E16-4A70-8044-4F01B4A78E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED62B325-8E16-4A70-8044-4F01B4A78E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED62B325-8E16-4A70-8044-4F01B4A78E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D59D3643-94BF-49FD-882E-AEF1D3C9D63E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59D3643-94BF-49FD-882E-AEF1D3C9D63E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59D3643-94BF-49FD-882E-AEF1D3C9D63E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59D3643-94BF-49FD-882E-AEF1D3C9D63E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D59D3643-94BF-49FD-882E-AEF1D3C9D63E} = {E9A6898F-F3CE-44D4-B940-E6CAE5755CE3}
+		{ED62B325-8E16-4A70-8044-4F01B4A78E9F} = {E487C81C-8EE3-428F-B7F2-EFF52AC204A0}
 	EndGlobalSection
 EndGlobal
