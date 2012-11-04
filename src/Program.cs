@@ -363,6 +363,7 @@ namespace TwoBit.Atlas
 					descriptor.FontItalic = fontItalic;
 					descriptor.ForceSpace = forceSpace;
 
+					descriptor.CharSets.Clear();
 					charSets.ForEach(set => descriptor.CharSets.Add(csp.Factory.Make(set)));
 				}
 

@@ -24,6 +24,9 @@ namespace HelloWorldAtlas
 	{
 		private Atlas currentAtlas = null;
 
+		// button-font.atlas from the samples has a button image at character 256
+		private readonly string defaultText = String.Format("Hello World! Press {0} to do nothing. This is from the atlas font.", (char)256);
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -159,6 +162,17 @@ namespace HelloWorldAtlas
 			Invalidate();
 		}
 
+		private string DisplayText
+		{
+			get
+			{
+				// use the default text if the text box value is empty
+				return !String.IsNullOrWhiteSpace(textBox1.Text) ? textBox1.Text : defaultText;
+			}
+
+			set { textBox1.Text = value; }
+		}
+
 		protected override void OnPaint(PaintEventArgs e)
 		{
 			var g = e.Graphics;
@@ -167,17 +181,20 @@ namespace HelloWorldAtlas
 			// check if we have an atlas
 			if (currentAtlas != null)
 			{
-				// button-font.atlas from the samples output has a button image at character 256
-				var text = String.Format("Hello World! Press {0} to do nothing. This is from the atlas font.", (char)256);
-
 				// draw string
-				DrawAtlas(g, text, 20, r.Height / 2);
+				DrawAtlas(g, DisplayText, 20, r.Height / 2);
 			}
 			else
 			{
 				// no atlas display a friendly how-to
 				g.DrawString("Drag-n-Drop an atlas file (that has a font) to view.", Font, Brushes.White, r);
 			}
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+			// redraw the screen win the textbox value has changed
+			Invalidate();
 		}
 	}
 }
