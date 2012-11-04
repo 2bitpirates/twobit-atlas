@@ -135,7 +135,7 @@ namespace HelloWorldAtlas
 					// apply the glyphs origin
 					pt.X = x + glyph.Offset.X;
 					pt.Y = y + glyph.Offset.Y;
-
+					
 					// get the correct image. usually an atlas only has one
 					var img = currentAtlas.Images[glyph.Page];
 

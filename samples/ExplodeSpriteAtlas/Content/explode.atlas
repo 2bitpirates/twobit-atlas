@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<atlas glyphs="13">
+  <images>
+    <image src="explode.png" width="278" height="299" />
+  </images>
+  <glyphs>
+    <glyph ch="0" p="0" x="62" y="233" w="56" h="49" a="-40" b="121" c="0" ox="-27" oy="-28" />
+    <glyph ch="1" p="0" x="157" y="216" w="69" h="62" a="-40" b="121" c="0" ox="-32" oy="-29" />
+    <glyph ch="2" p="0" x="1" y="158" w="72" h="67" a="-40" b="121" c="0" ox="-34" oy="-30" />
+    <glyph ch="3" p="0" x="161" y="76" w="76" h="71" a="-40" b="121" c="0" ox="-36" oy="-32" />
+    <glyph ch="4" p="0" x="161" y="1" w="78" h="73" a="-40" b="121" c="0" ox="-37" oy="-33" />
+    <glyph ch="5" p="0" x="80" y="1" w="79" h="74" a="-40" b="121" c="0" ox="-38" oy="-35" />
+    <glyph ch="6" p="0" x="1" y="1" w="77" h="76" a="-40" b="121" c="0" ox="-38" oy="-36" />
+    <glyph ch="7" p="0" x="80" y="77" w="76" h="76" a="-40" b="121" c="0" ox="-39" oy="-36" />
+    <glyph ch="8" p="0" x="79" y="155" w="76" h="76" a="-40" b="121" c="0" ox="-39" oy="-37" />
+    <glyph ch="9" p="0" x="1" y="79" w="76" h="77" a="-40" b="121" c="0" ox="-39" oy="-38" />
+    <glyph ch="10" p="0" x="158" y="149" w="77" h="65" a="-40" b="121" c="0" ox="-40" oy="-39" />
+    <glyph ch="11" p="0" x="1" y="227" w="59" h="53" a="-40" b="121" c="0" ox="-26" oy="-30" />
+    <glyph ch="12" p="0" x="241" y="1" w="36" h="34" a="-40" b="121" c="0" ox="-5" oy="-19" />
+  </glyphs>
+  <info>
+    <common usefonts="False" useimages="True" alignment="BestFit" spacing="1" powertwo="False" maxsize="2048" makesprite="True" />
+    <font name="Arial" size="24" bold="False" italic="False">
+      <charsets>
+        <charset name="ascii" />
+      </charsets>
+    </font>
+    <sprite rate="10" overflow="Loop" />
+    <image startcode="0">
+      <images>
+        <image src="..\assets\explode\explode00.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode01.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode02.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode03.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode04.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode05.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode06.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode07.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode08.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode09.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode10.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode11.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+        <image src="..\assets\explode\explode12.png" ox="40.5" oy="39.5" code="0" usecode="False" loc="0, 0" angle="0" />
+      </images>
+    </image>
+  </info>
+</atlas>
