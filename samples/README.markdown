@@ -19,6 +19,8 @@ All sample batch files generate the resutls to the ``.\output`` folder.
 
 **lostgarden.bat** generates two atlas types from [lostgarden.com](http://www.lostgarden.com/). Shows packing of images of various sizes.
 
+[http://www.lostgarden.com/2006/07/more-free-game-graphics.html](http://www.lostgarden.com/2006/07/more-free-game-graphics.html)
+
 ![texture pack](https://github.com/foobit/twobit-atlas/raw/master/doc/texturepack.png)
 
 ### Sample Applications ###
