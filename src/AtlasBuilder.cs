@@ -98,9 +98,10 @@ namespace TwoBit.Atlas
 					abc.abcC = 0;
 
 					ii.SortCode = ii.HasCustomCode ? ii.Code : UniqueCode(ref ch, descriptor.Images);
-					GlyphDescriptor desc = new GlyphDescriptor((char)ii.SortCode, abc, image, descriptor.Spacing * 2);
-					desc.Offset = offset - (Vec2i)ii.Offset;
-					glyphs.Add(desc);
+					var gi = new GlyphDescriptor((char)ii.SortCode, abc, image, descriptor.Spacing * 2);
+					gi.Offset = offset - (Vec2i)ii.Offset;
+					gi.ImageInfo = ii;
+					glyphs.Add(gi);
 
 					if (progress != null)
 					{
@@ -117,7 +118,7 @@ namespace TwoBit.Atlas
 			if (descriptor.UseFonts)
 			{
 				// build image for each glyph
-				GLYPHMETRICS gm = new GLYPHMETRICS();
+				var gm = new GLYPHMETRICS();
 				foreach (char ch in chars)
 				{
 					Image image = null;
@@ -292,7 +293,7 @@ namespace TwoBit.Atlas
 
 			#region save glyphs
 			object glyph = doc.AddNode(root, "glyphs");
-			foreach (GlyphDescriptor gi in glyphs)
+			foreach (var gi in glyphs)
 			{
 				object node = doc.AddNode(glyph, "glyph");
 				doc.SetAttrib(node, "ch", (int)gi.CH);
@@ -309,7 +310,7 @@ namespace TwoBit.Atlas
 
 				if (gi.ImageInfo != null)
 				{
-					doc.SetAttrib(node, "name", Path.GetFileName(gi.ImageInfo.FileInfo.Name));
+					doc.SetAttrib(node, "name", Path.GetFileNameWithoutExtension(gi.ImageInfo.FileInfo.Name));
 				}
 			}
 			#endregion save glyphs
@@ -647,7 +648,7 @@ namespace TwoBit.Atlas
 			int my = 0;
 
 			// calc max sizes
-			foreach (GlyphDescriptor gi in glyphs)
+			foreach (var gi in glyphs)
 			{
 				mx = Math.Max(mx, gi.Width);
 				my = Math.Max(my, gi.Height);
@@ -681,7 +682,7 @@ namespace TwoBit.Atlas
 
 			// position
 			int current = 0;
-			foreach (GlyphDescriptor gi in glyphs)
+			foreach (var gi in glyphs)
 			{
 				gi.X = (current % cx) * sz;
 				gi.Y = (current / cx) * sz;
@@ -714,7 +715,7 @@ namespace TwoBit.Atlas
 			else
 			{
 				// calc tightest box
-				foreach (GlyphDescriptor gi in glyphs)
+				foreach (var gi in glyphs)
 				{
 					texSize.X = Math.Max(texSize.X, gi.X + gi.Width);
 					texSize.Y = Math.Max(texSize.Y, gi.Y + gi.Height);
